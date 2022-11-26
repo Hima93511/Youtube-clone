@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="img/logo.PNG" class="logo" alt="">
+        <div class="search-box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="img/search.PNG" alt=""></button>
+        </div>
+        <div class="user-options">
+            <img src="img/video.PNG" class="icon" alt="">
+            <img src="img/grid.PNG" class="icon" alt="">
+            <img src="img/bell.PNG" class="icon" alt="">
+            <div class="user-dp">
+                <img src="https://i.pinimg.com/originals/e6/c2/e2/e6c2e23b4c030c6b277a7bd68b7f885b.jpg" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="side-bar">
+        <a href="#" class="links active"><img src="img/home.PNG" alt="">home</a>
+        <a href="#" class="links"><img src="img/explore.PNG" alt="">explore</a>
+        <a href="#" class="links"><img src="img/subscription.PNG" alt="">subscription</a>
+        <hr class="seperator">
+        <a href="#" class="links"><img src="img/library.PNG" alt="">library</a>
+        <a href="#" class="links"><img src="img/history.PNG" alt="">history</a>
+        <a href="#" class="links"><img src="img/your-video.PNG" alt="">your video</a>
+        <a href="#" class="links"><img src="img/watch-later.PNG" alt="">watch later</a>
+        <a href="#" class="links"><img src="img/liked video.PNG" alt="">like video</a>
+        <a href="#" class="links"><img src="img/show more.PNG" alt="">show more</a>
+    </div>
+
+    <!-- filters -->
+    <div class="filters">
+        <button class="filter-options active">all</button>
+        <button class="filter-options">CSS</button>
+        <button class="filter-options">web development</button>
+        <button class="filter-options">python</button>
+        <button class="filter-options">entertainment</button>
+        <button class="filter-options">marvel</button>
+        <button class="filter-options">javascript</button>
+        <button class="filter-options">artificial intelligence</button>
+        <button class="filter-options">machine learning</button>
+        <button class="filter-options">trending</button>
+    </div>
+
+    <!-- videos -->
+    <div class="video-container">
+        <div class="video">
+            <img src="data:image/jpeg;base64,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" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROI80F3MD1t5VETrxn7ZZXdPiPPy4cjhEtPg&usqp=CAU" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRag2pSwsHbhGYxEn8jpoRXWF1izgB-ZQxEQ&usqp=CAU" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div><div class="video-container">
+        <div class="video">
+            <img src="data:image/jpeg;base64,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" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    .flex-item-right {
+        flex: 50%;
+      }
+    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>    </div><div class="video-container">
+        <div class="video">
+            <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+            <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+                <div class="info">
+                    <h4 class="title">Making YouTube In HTML and CSS</h4>
+                    <p class="channel-name">Himanshu garg lpu</p>
+                    <h6>2M views 1 month ago</h6>
+                    
+                </div>
+            </div>
+        </div>
+    </div>           
+</div>
+</div>
+</div>
+</div>    </div><div class="video-container">
+<div class="video">
+<img src="https://media-exp1.licdn.com/dms/image/D4E03AQFQQeeBHwfr3A/profile-displayphoto-shrink_800_800/0/1664809352285?e=1674691200&v=beta&t=RNf4fM779l9sVOVVf9iCvoqowMb0MYLKIeWmrsxSYco" class="thumbnail" alt="">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png" class="channel-icon" alt="">
+<div class="info">
+    <h4 class="title">Making YouTube In HTML and CSS</h4>
+    <p class="channel-name">Himanshu garg lpu</p>
+    <h6>2M views 1 month ago</h6>
+    
+</div>
+</div>
+</div>
+</div>
+
+<!--     <script src="https://apis.google.com/js/api.js"></script>
+    <script src="app.js"></script> -->
+    
+</body>
+</html>
